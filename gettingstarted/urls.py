@@ -14,3 +14,5 @@ urlpatterns = [
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+from api import urls
