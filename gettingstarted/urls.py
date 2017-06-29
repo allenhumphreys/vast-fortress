@@ -11,8 +11,7 @@ import hello.views
 
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
-    url(r'^db', hello.views.db, name='db'),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^db/?', hello.views.db, name='db'),
+    url(r'^admin/?', include(admin.site.urls)),
+    url(r'^api/?', include('api.urls')),
 ]
-
-from api import urls
